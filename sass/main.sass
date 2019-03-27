@@ -1,0 +1,919 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+
+.wrapper
+  max-width: 1200px
+  margin: 0 auto
+
+button
+  color: $colorW !important
+  &:last-child
+    color: $colorB 
+
+// SECTION SCROLL ARROW
+ 
+
+// SECTION PRELOADER
+#preloader
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  background: #474747
+  z-index: 999
+  text-align: center
+
+#preloader span
+  display: inline-block
+  vertical-align: middle
+  font-size: 3em
+  color: #fff
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5)
+
+#preloader::before
+  content: ''
+  display: inline-block
+  vertical-align: middle
+  height: 100%
+  margin-left: -0.36em   
+
+.preloader
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.bar
+  width: 6px
+  height: 60px
+  background: white
+  display: inline-block
+  transform-origin: bottom center
+  animation: loading 1.5s ease-in-out infinite
+
+.bar1
+  animation-delay: 0.1s
+
+.bar2
+  animation-delay: 0.2s
+
+.bar3
+  animation-delay: 0.3s
+
+.bar4
+  animation-delay: 0.4s
+
+.bar5
+  animation-delay: 0.5s
+
+.bar6
+  animation-delay: 0.6s
+
+.bar7
+  animation-delay: 0.7s
+
+.bar8
+  animation-delay: 0.8s
+
+@keyframes loading
+  0%
+    transform: scaleY(0.1)
+    background: #fff
+
+  50%
+    transform: scaleY(1)
+    background: #717171
+
+  100%
+    transform: scaleY(0.1)
+    background: transparent
+
+
+ 
+
+// SECTION NAVBAR
+.navbar
+  position: fixed
+  z-index: 99999999999
+  height: 80px
+  overflow: hidden
+  top: 0
+  display: flex
+  align-items: center
+  width: 100%
+  border-bottom: 3px solid $colorR
+  background: $colorB
+  transition: all .5s
+.logo
+  font-size: 3rem
+  color: $colorW
+  padding: 10px
+  text-decoration: none
+  font-weight: 700
+  transition: color 0.3s
+  text-transform: uppercase
+  float: left
+  margin-left: 20px
+  span
+    color: $colorR 
+
+.menu
+  position: absolute
+  right: 20px
+  
+  ul
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-items: center
+    flex: 1 1 0
+    a
+      font-size: 1rem
+      color: $colorW
+      padding: 10px
+      text-decoration: none
+      font-weight: 700
+      transition: color 0.3s
+      text-transform: uppercase
+      &:hover
+          border: 3px solid #2980b9
+          background: transparent
+
+
+
+.nav-btn
+  display: none
+  position: absolute
+  right: 20px
+  span
+      display: block
+      margin: 6px
+      width: 40px
+      height: 3px
+      background: $colorW
+
+//SECTION ABOUT ME--------------------------------------------------------------------------------------------
+.header
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    background: $colorB
+.header-me
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    flex: 1 1 0
+    margin-top: 50px
+    h1
+        font-size: 5.6rem
+        font-weight: bold
+        color: $colorW
+        margin: 0
+        text-align: center
+        text-transform: uppercase
+        span
+          color: $colorR
+    p
+        color: $colorY
+        font-size: 1.5rem
+    
+    .header-me-btn
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        justify-content: center
+        cursor: pointer
+    .aM-btn-know-More
+        margin-right: 20px
+        background: $colorB
+        border: 3px solid $colorR
+        font-size: 1.5rem
+        padding: 20px 50px
+        cursor: pointer
+
+.aM-btn-hire-More
+    background: transparent
+    border: 3px solid $colorY
+    font-size: 1.5rem
+    padding: 20px 50px
+    cursor: pointer
+
+    
+
+  
+
+
+//SECTION ABOUT ME
+.about-me
+  .wrapper
+    h1
+      text-transform: uppercase
+      text-align: center
+      color: $colorY
+      font-size: 3rem
+      margin: 0
+    p
+      color: $colorW
+      font-size: 1.5rem
+      text-align: center
+    .about-me-container
+      display: flex 
+      flex-flow: row wrap
+      justify-content: space-between
+      align-items: center
+      .who-i-am
+        flex: 1 1 33%
+        h3
+          text-align: center
+          color: $colorY
+          font-size: 2rem
+          padding: 0
+          margin: 0
+        p
+          text-align: justify
+          color: $colorW
+          font-size: 1.2rem
+          line-height: 1.6
+      .my-photo
+        flex: 1 1 33%
+        h3
+          text-align: center
+          color: $colorY
+          font-size: 2rem
+          padding: 0
+          margin: 0
+        img
+          width: 100%
+          height: 100%
+          border-radius: 50%
+      .info-and-skills
+        flex: 1 1 33%
+        h3
+          text-align: center
+          color: $colorY
+          font-size: 2rem
+          padding: 0
+          margin: 0
+        p
+          text-align: justify
+          color: $colorW
+          font-size: 1.2rem
+          line-height: 1.6
+
+    
+
+
+
+
+        
+
+//SECTION SERVICE
+
+.services
+    display: flex
+    flex-flow: column wrap
+    flex: 1 1 0
+    padding: 10px 50px
+    background: $colorB
+    h1
+        text-transform: uppercase
+        text-align: center
+        color: $colorY
+        font-size: 3rem
+        margin: 0
+    .services-list
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        align-items: center
+        .services-item
+            cursor: pointer
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+            align-items: center
+            padding: 30px
+            flex: 1 1 33%
+            transition: background .9s
+            .front
+              display: flex
+              flex-flow: column nowrap
+              justify-content: center
+              align-items: center
+              h1
+                color: $colorW
+                text-align: center
+                font-size: 1rem
+              i
+                color: $colorW
+                font-size: 5rem
+                padding: 10px 20px
+            .back
+              display: flex
+              flex-flow: column nowrap
+              justify-content: center
+              align-items: center
+              background: $colorW
+              padding: 10px
+              border-radius: 15px
+              h2
+                color: $colorB
+              p
+                color: $colorB
+            
+
+
+.flip
+  position: relative
+  > .front,
+  > .back
+    display: block
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    transition-duration: .5s
+    transition-property: transform, opacity
+  > .front
+    transform: rotateY(0deg)
+  > .back
+    position: absolute
+    opacity: 0
+    top: 0px
+    left: 0px
+    width: 100%
+    height: 100%
+    transform: rotateY(-180deg)
+  &:hover
+    > .front
+      transform: rotateY(180deg)
+    > .back
+      opacity: 1
+      transform: rotateY(0deg)
+  &.flip-vertical
+    > .back
+      transform: rotateX(-180deg)
+    &:hover
+      > .front
+        transform: rotateX(180deg)
+      > .back
+        transform: rotateX(0deg)
+
+
+
+// SECTION  MY SKILLS-------------------------------------------------------------------------------------------------
+
+#skills
+  border: 4.5px solid $colorW
+  border-radius: 20px
+  padding: 1em 0
+  margin: 4em auto
+  max-width: 80%
+  background: $colorB
+  display: block
+  h1
+    font-size: 3rem
+    text-transform: uppercase
+    color: $colorY
+    text-align: center
+    font-weight: lighter
+    display: block
+    letter-spacing: .2em
+    margin: 0
+  ul
+    padding-left: 0
+    color: $colorY
+    text-align: left
+    margin-left: 2em
+    list-style-type: none
+    li
+      letter-spacing: .2em
+      text-transform: uppercase
+      font-size: 2rem
+      max-font-size: 3rem
+      font-weight: lighter
+      padding: 0
+      i
+          font-size: 2rem
+
+
+
+/* Containers for skill levels
+
+.box
+  height: 1em
+  width: 93%
+  border: .1em solid $colorW
+  border-radius: 3px
+  display: inline-block
+  margin: .5em 0 2em
+  text-align: center
+
+/* Skill levels
+
+#one
+  height: .9em
+  width: 60%
+  background: $colorW
+  display: block
+
+#two
+  height: .9em
+  width: 90%
+  background: $colorW
+  display: block
+
+#three
+  height: .9em
+  width: 50%
+  background: $colorW
+  display: block
+
+#four
+  height: .9em
+  width: 90%
+  background: $colorW
+  display: block
+
+#five
+  height: .9em
+  width: 92%
+  background: $colorW
+  display: block
+
+#six
+  height: .9em
+  width: 85%
+  background: $colorW
+  display: block
+
+#seven
+  height: .9em
+  width: 100%
+  background: $colorW
+  display: block
+
+#eight
+  height: .9em
+  width: 65%
+  background: $colorW
+  display: block
+
+/* Large hover state for animation
+
+#skills:hover #one,
+#skills:hover #two,
+#skills:hover #three,
+#skills:hover #four,
+#skills:hover #five,
+#skills:hover #six,
+#skills:hover #seven,
+#skills:hover #eight
+  animation: grow 1.4s 0.3s cubic-bezier(0.39, 0.07, 0.16, 0.97)
+
+/* Keyframe
+
+@keyframes grow
+  0%
+    width: 0
+  100%
+    transform: 100%
+
+
+// SECTION  POTFOLIO-------------------------------------------------------------------------------------------------
+.portfolio
+  background: $colorB
+  h4
+    text-transform: uppercase
+    text-align: center
+    color: $colorY
+    font-size: 3rem
+    margin: 0
+  p
+    color: $colorW
+    font-size: 1.5rem
+    text-align: center
+  .toggles
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    padding: 10px 50px
+    button
+      margin-left: 20px
+      background: $colorB
+      border: 0
+      padding: 10px 20px
+      border-radius: 50px
+      border-bottom: 3px solid #717171
+      color: $colorW
+      &:hover
+        color: $colorY
+        background: $colorR
+        box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.4), -30px 0px 40px rgba(0, 0, 0, 0.4) 
+      &:first-child
+        margin-left: 0
+        
+        
+        
+  .posts
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    align-items: center
+    padding: 0 100px
+    .post
+       cursor: pointer
+       display: flex
+       flex-flow: column wrap
+       justify-content: center
+       align-items: center
+       flex: 1 1 33%
+       transition: background .9s
+       &:hover
+          background: $colorY
+          box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.4), -30px 0px 40px rgba(0, 0, 0, 0.4) 
+       img
+         padding: 10px
+         width: 100%
+         height: 100%
+
+.portfolio-btn
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  button
+    background: transparent
+    border: 3px solid $colorW
+    font-size: 1.5rem
+    padding: 20px 50px
+    cursor: pointer
+    margin-top: 50px
+    margin-bottom: 50px
+    text-align: center
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.4), -30px 0px 40px rgba(0, 0, 0, 0.4) 
+
+
+// SECTION  TESTEMONIALS-------------------------------------------------------------------------------------------------
+.testimonials
+  border: 4.5px solid $colorW
+  border-radius: 20px
+  padding: 1em 0
+  margin: 4em auto
+  max-width: 80%
+  background: $colorB
+  display: block
+  
+
+
+.testimonial-carousel
+  width: 100%
+  max-width: 1200px
+  margin: 0 auto
+
+.testimonials-wrapper
+  width: 95%
+  margin: 0 auto
+
+.testimonials-wrapper h4
+  font-size: 15px
+  font-weight: 400
+  line-height: 23px
+  position: relative
+  padding: 30px
+  color: $colorB
+  border-radius: 5px
+  background: $colorY
+  box-shadow: 0px 0px 5px 10px rgba(204, 204, 204, 1)
+
+.testimonials-blob,
+.testimonials-img
+  border-radius: 100%
+
+.testimonials-img
+  position: relative
+  left: 50%
+  overflow: hidden !important
+  width: 100px
+  height: 100px
+  margin-bottom: 10px
+  margin-left: -50px
+  box-shadow: 0 0 0 5px #474747
+  transition: all ease-out .5s
+  transform: translateY(-30%)
+  filter: brightness(2)
+
+.testimonial-carousel .active .testimonials-img
+  transform: translateY(0)
+  filter: brightness(1)
+
+.testimonials-person-info
+  text-align: center
+  color: $colorW
+
+.testimonials-blob
+  position: relative
+  left: 80%
+  width: 3px
+  height: 3px
+  transform: rotate(45deg)
+
+@keyframes anim
+  0%
+    opacity: 0
+    box-shadow: 0 0 0 0 white, 0 0 0 0 white
+  50%
+    box-shadow: 0 15px 0 0 white, 0 0 0 0 white
+  100%
+    opacity: 1
+    background: #fff
+    box-shadow: 0 15px 0 4px white, 0 35px 0 6px white
+
+
+.testimonial-carousel .active .testimonials-blob
+  transform-origin: 50% 50%
+  animation: anim linear .5s
+  animation-iteration-count: 1
+  animation-fill-mode: forwards
+
+.testimonial-carousel
+  overflow: hidden
+  cursor: grab
+
+.testimonial-carousel:active
+  cursor: grabbing
+
+.testimonial-carousel .owl-item
+  overflow: hidden
+  transition: all ease-out .3s
+  transform: scale(0.7)
+  opacity: 0
+
+.testimonial-carousel .owl-item.active
+  transform: scale(1)
+  opacity: 1
+
+.testimonial-carousel .owl-next,
+.testimonial-carousel .owl-prev
+  font-size: 13px
+  line-height: 35px
+  position: absolute
+  top: 50%
+  padding: 0 10px
+  transition: all ease-out .25s
+  transform: translateY(-100%)
+  opacity: 1
+  color: #fff
+  border-radius: 3px
+  background: #171719
+
+.testimonial-carousel .owl-next:hover,
+.testimonial-carousel .owl-prev:hover
+  color: #fff
+  background: #615e6b
+
+.testimonial-carousel .owl-prev
+  left: 0
+
+.testimonial-carousel .owl-next
+  right: 0
+
+.testimonial-carousel .owl-next.disabled,
+.testimonial-carousel .owl-prev.disabled
+  opacity: 0
+
+// SECTION  COUNTER-------------------------------------------------------------------------------------------------
+
+.counter
+  background: $colorB
+
+.middle
+  width: 100%
+
+.counting-sec
+  padding: 40px 0
+  width: 100%
+
+.inner-width
+  max-width: 1200px
+  margin: auto
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-around
+  align-items: center
+  flex: 1 1 0
+
+.col
+  flex: 1
+  text-align: center
+  padding: 20px
+  color: $colorW
+  text-transform: uppercase
+
+.col i
+  font-size: 40px
+  color: $colorW
+
+.num
+  font-size: 40px
+  margin: 20px 0
+
+
+
+// SECTION FOOTER-------------------------------------------------------------------------------------------------
+
+footer
+  background: url(../img/banner-2.jpeg) no-repeat
+  background-size: cover
+  p
+    color: $colorW
+    text-align: center
+    font-size: 2rem
+    background: $colorB
+    margin: 0
+    padding: 20px 0
+  h4
+    text-transform: uppercase
+    text-align: center
+    color: $colorY
+    font-size: 3rem
+  form
+    max-width: 1200px
+    margin: 0 auto
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    flex: 1 1 0
+    input
+      width: 49%
+      margin-left: 10px
+      padding: 15px 10px
+      font-size: 1rem
+      color: #717171
+      &:first-child
+        margin-left: 0
+    textarea
+      margin-top: 30px
+      width: 99.25%
+      padding: 15px 10px
+
+input[type='submit']
+  background: #ffffff
+  border: 3px solid $colorW
+  font-size: 1.5rem
+  padding: 20px 20px
+  cursor: pointer
+
+hr
+  color: #fff
+
+.footer-btn
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  button
+    background: $colorB
+    border: 3px solid $colorW
+    font-size: 1.5rem
+    padding: 20px 50px
+    cursor: pointer
+    margin-top: 50px
+    margin-bottom: 50px
+    text-align: center
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.4), -30px 0px 40px rgba(0, 0, 0, 0.4) 
+
+// SECTION FIXED CONTACT-------------------------------------------------------------------------------------------------
+
+
+.contact-info
+  position: fixed
+  top: 40%
+  z-index: 99999
+  left: -2.5%
+  box-shadow: 15px 0px 10px rgba(0, 0, 0, 0.4), 10px 0px 10px rgba(0, 0, 0, 0.4) 
+  transition: .3s
+  &:hover
+    left: 0
+
+@keyframes flash
+  from,
+  50%,
+  to
+    opacity: 1
+  25%,
+  75%
+    opacity: 0
+
+.contact-info:not(:hover)
+  -webkit-animation-name: flash
+  animation-name: flash
+  animation-iteration-count: infinite
+
+.contact-info:not(:hover) i
+    color: $colorW
+
+  
+
+
+.option
+  cursor: pointer
+  position: relative
+
+.option i
+  display: block
+  width: 60px
+  text-align: center
+  height: 60px
+  line-height: 60px
+  background: $colorW
+  color: $colorB
+  font-size: 20px
+  transition: 0.6s
+
+.option:hover i
+  color: $colorB
+
+
+
+.text
+  position: absolute
+  height: 60px
+  width: 200px
+  background: $colorY
+  top: 0
+  z-index: -1
+  left: -140px
+  color: $colorB
+  font-weight: bold
+  line-height: 60px
+  text-align: center
+  transition: 0.6s
+
+.option:hover .text
+  left: 60px
+
+
+// SECTION BUTTON BACK TO TOP-------------------------------------------------------------------------------------------------
+
+.gotopbtn
+  position: fixed
+  width: 50px
+  height: 50px
+  background: $colorR
+  box-shadow: 15px 0px 15px rgba(0, 0, 0, 0.4), 10px 0px 10px rgba(0, 0, 0, 0.4) 
+  bottom: 40px
+  right: 50px
+  text-decoration: none
+  text-align: center
+  line-height: 50px
+  color: white
+  font-size: 22px
+
+// SECTION HR STYLES-------------------------------------------------------------------------------------------------
+
+
+
+hr
+  border: 0
+  margin: 1.35em auto
+  max-width: 100%
+  background-position: 50%
+  box-sizing: border-box
+
+
+.bookends
+  position: relative
+  border-width: 5px
+  border-color: hsl(0, 100%, 50%) transparent
+  height: 15px
+  border-style: double
+  width: 50%
+
+.bookends:before,
+.bookends:after
+  position: absolute
+  bottom: -3.536px
+  width: 10.071px
+  height: 10.071px
+  display: block
+  border-width: 0 7.071px 7.071px 0
+  border-color: hsl(0, 100%, 50%)
+  border-style: double
+  box-sizing: border-box
+
+.bookends:before
+  transform: translateZ(0) rotate(-45deg)
+  left: -21px
+
+.bookends:after
+  transform: translateZ(0) rotate(135deg)
+  right: -21px
+
+@import "media" // Всегда в конце

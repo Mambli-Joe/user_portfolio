@@ -1,0 +1,77 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 850px)
+  //NAV-----------------------------------
+  .navbar
+    overflow: visible
+  .menu
+    width: 100%
+    right: 0
+    top: 80px
+    background: $colorR
+    overflow: hidden
+    max-height: 0
+  .menu a
+    display: block
+    text-align: center
+    padding: 10px
+    margin: 0
+  .nav-btn
+    display: block
+    cursor: pointer
+  .show
+    max-height: 500px
+
+  .my-skills
+    ul
+      li
+        text-align: center
+      i
+        display: none
+
+  .portfolio
+    .posts
+      .post
+        display: flex
+        flex-flow: row wrap
+        justify-content: space-between
+        align-items: center
+        flex: 1 1 50%
+  .header-me
+    margin-top: 100px
+
+@media only screen and (max-width: 750px)
+  form
+    display: flex
+    flex-flow: row wrap
+    justify-content: flex-start
+    align-items: flex-start
+    flex: 1 1 0
+
+
+@media screen and (max-width: 600px)
+
+  .my-skills
+    ul
+      font-size: 0.3rem
+      line-height: normal
+  #skills
+    margin-top: 0
+    margin-bottom: 0
+    &:first-child
+      border: 0
+
+  .logo
+    float: none
+    margin: 0 auto
+
+  
+    
+
+
+  
+  
+    
